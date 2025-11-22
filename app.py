@@ -70,10 +70,7 @@ def crear_indice_vectorial():
   collection.create_search_index(model=search_index_model)
   time.sleep(20)
 
-crear_indice_vectorial()
-# =======================
-# BACKBLAZE CONEXIONES
-# =======================
+
 
 def conectar_b2_lectura():
     """Devuelve bucket con permisos de lectura."""
@@ -254,3 +251,4 @@ for msg in st.session_state.historial:
         st.chat_message("user").write(msg["texto"])
     else:
         st.chat_message("assistant").write(msg["texto"])
+
